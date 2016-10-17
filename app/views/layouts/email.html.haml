@@ -1,0 +1,70 @@
+!!!
+%html
+  %head
+    :css
+      body {
+      	margin: 0;
+      	padding: 0;
+      	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      	font-size: 14px;
+      	color: #4B4B4B;
+
+        background-color: #e7ebee;
+      }
+
+      .email {
+        width: 70%;
+        margin: 60px auto 5px;
+        border-radius: 4px;
+        overflow: hidden;
+        border-style: solid;
+        border-color: #e1e1e1;
+        border-width: 1px 1px 5px;
+      }
+
+      .email-heading {
+      	padding: 35px 0;
+      	background-color: #34495e;
+        text-align: center;
+      }
+
+      .email-heading > a > img {
+      	vertical-align: middle;
+      }
+
+      .email-body {
+        padding: 0 20px 40px;
+      	background-color: #ffffff;
+      }
+
+      .email-body h2 {
+      	margin-top: 0;
+        padding: 25px 0 10px;
+      }
+
+      .email-signature {
+        margin-top: 25px;
+        font-size: 16px;
+      }
+
+      .email-signature h4 {
+      	margin: 0;
+      }
+
+      .email-signature .signature {
+      	color: #369bc9;
+      }
+
+      .copyright {
+      	text-align: center;
+      	color: #aaa;
+      	font-size: 10px;
+      }
+  %body
+    .email
+      .email-heading
+        = link_to web_url, title: 'ScrubPay' do
+          = image_tag 'sp-logo-29-29.png', alt: 'ScrubPay'
+      .email-body
+        = yield
+    .copyright &copy; 2014 ScrubPay, LLC

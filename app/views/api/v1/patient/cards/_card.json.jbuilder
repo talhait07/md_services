@@ -1,0 +1,7 @@
+json.id card[:id]
+json.brand card[:brand]
+json.last4 card[:last4]
+json.exp_month card[:exp_month]
+json.exp_year card[:exp_year]
+json.name card[:name]
+json.is_default card[:is_default]
